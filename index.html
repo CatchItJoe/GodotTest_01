@@ -15,22 +15,10 @@
 			background-color: black;
 		}
 
-		#container {
-		display: inline-block; /* scale with canvas */
-		vertical-align: top; /* prevent extra height */
-		position: absolute; /* ~~root for absolutely positioned overlay~~ changed from relative to absolute for proper scaling */
-		left:0;		/*game at left edge, any black bars at the right*/
-		border: 0 none;
-		padding: 0;
-		background-color: #0c0c0c;
-		height:100%; /*for proper scaling*/
-		}
-
 		#canvas {
 			display: block;
 			margin: 0;
 			color: white;
-			height:100%;	/*for proper scaling*/
 		}
 
 		#canvas:focus {
@@ -124,6 +112,7 @@
 			visibility: visible;
 		}
 	</style>
+<link rel='manifest' href='index.manifest.json'>
 
 </head>
 <body>
@@ -149,7 +138,7 @@
 	<script type='text/javascript' src='index.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
-		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":14583920,"index.wasm":18795755},"focusCanvas":false,"gdnativeLibs":[]};
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":14583920,"index.wasm":18795755},"focusCanvas":false,"gdnativeLibs":[],"serviceWorker":"index.service.worker.js"};
 		var engine = new Engine(GODOT_CONFIG);
 
 		(function() {
